@@ -8,4 +8,4 @@ from moduleA import A
 
 a = A(True)
 
-print(a.imported)
+assert a.imported
