@@ -4,7 +4,6 @@ class GameXO:
 		self.startGame()
 
 	def startGame( self ):
-		print("start game")
 		self.cells = {}
 		self.rowCount = 3
 		self.columnCount = 3
