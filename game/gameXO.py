@@ -46,4 +46,3 @@ class GameXO:
 	def isGameOver(self):
 		if len(self.cells.keys()) == self.rowCount * self.ColumnCount:
 			return True
-
