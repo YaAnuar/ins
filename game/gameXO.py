@@ -15,6 +15,7 @@ class GameXO:
 			self.fieldx.update({row: {1: [], 2: []}})
 		for col in range(0,colCount):
 			self.fieldy.update({col: {1: [], 2: []}})
+		# We have only one line for Z
 		for zline in range(0, rowCount/columnCount):
 			self.fieldz.update({zline: {1: [], 2: []}})
 
