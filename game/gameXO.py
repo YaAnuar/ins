@@ -4,6 +4,7 @@ class GameXO:
 		self.startGame()
 
 	def startGame( self, rowCount=3,columnCount=3, maxLine=3 ):
+		self.gameStart = True  
 		self.cells = {}
 		self.rowCount = rowCount
 		self.columnCount = columnCount
@@ -19,17 +20,20 @@ class GameXO:
 			self.fieldz.update({zline: {1: [], 2: []}})
 
 	def fillXYLine(self, player, row, col, xo=1):
-		self.fieldx[row][player].append(xo)
-		self.fieldy[col][player].append(xo)
+		if self.gameStart:
+			self.fieldx[row][player].append(xo)
+			self.fieldy[col][player].append(xo)
 		
 	def fillZline(self, player, zline1, zline2, xo=1):
-		if zline1 != None:
-			self.fieldz[zline1][player].append(xo)
-		if zline2 != None:
-			self.fieldz[zline2][player].append(xo)
+		if self.gameStart:
+			if zline1 != None:
+				self.fieldz[zline1][player].append(xo)
+			if zline2 != None:
+				self.fieldz[zline2][player].append(xo)
 
 	def addXO(self, row, column, xo, player):
-		self.cells.update({[row,column]: xo})
+		if self.gameStart == True:
+			self.cells.update({[row,column]: xo})
 
 	def isEmpty(self, row, column):
 		if [row, column] in self.cells.keys():
@@ -39,14 +43,24 @@ class GameXO:
 	
 	def isPlayerWin(self, player, row, col, zline1=None, zline2=None):
 		if len(self.fieldx[row][player]) == self.maxline or len(self.fieldy[col][player]) == self.maxline:
+			self.gameStart = False
 			return True
 		if zline1 != None:
 			if len(self.fieldz[zline1][player]) == self.maxline:
+					self.gameStart = False
 					return True
 		if zline2 != None:
 			if len(self.fieldz[zline2][player]) == self.maxline:
+					self.gameStart = False
 					return True
 
+
+	def isGameStarted(self):
+		return self.gameStart
+
 	def isGameOver(self):
-		if len(self.cells.keys()) == self.rowCount * self.ColumnCount:
-			return True
+		if self.gameStart:
+			if len(self.cells.keys()) == self.rowCount * self.ColumnCount:
+				self.gameStart = False
+				return True
+
