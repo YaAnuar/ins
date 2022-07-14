@@ -6,7 +6,7 @@ async def write_json_to_file(key, url):
 	async with lock:
 	    async with aiohttp.ClientSession() as session:
 	    	async with session.get(url) as response:
-	            with open("file.txt", key) as city:
+	            with open("cities.txt", key) as city:
 	            	city.write(str(await response.json()))	
 	            	city.write('\n\n\n')
 
