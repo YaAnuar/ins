@@ -19,7 +19,7 @@ class GameXO:
 		for zline in range(0, 2):
 			self.fieldz.update({zline: {1: [], 2: []}})
 
-	def fillXYLine(self, player, row, col, zline, xo=1):
+	def fillXYLine(self, player, row, col, xo=1):
 		self.fieldx[row][player].append(xo)
 		self.fieldy[col][player].append(xo)
 		
