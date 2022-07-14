@@ -9,25 +9,19 @@ class GameXO:
 		self.columnCount = 3
 		self.maxline = 3
 		self.fields = {}
-		self.fieldx = {}
-		self.fieldx[1] = []
-		self.fieldx[2] = []
-		self.fieldy = {}
-		self.fieldy[1] = []
-		self.fieldy[2] = []
-		self.fieldz = {}
-		self.fieldz[1] = []
-		self.fieldz[2] = []
+		self.fields.update({"fieldx": {1: [], 2: []}})
+		self.fields.update({"fieldy": {1: [], 2: []}})
+		self.fields.update({"fieldz": {1: [], 2: []}})
 
 	def fillField(self, player, xo=1):
-		self.fieldx[player].append(xo)
-		self.fieldy[player].append(xo)
+		self.fields["fieldx"][player].append(xo)
+		self.fields["fieldy"][player].append(xo)
 		if row == column:
-			self.fieldz[player].append(xo)
+			self.fields["fieldz"][player].append(xo)
 
 	def addXO(self, row, column, xo, player):
 		self.cells.update({[row,column]: xo})
-		fillField(player)
+		fillField(player, 1)
 
 	def isEmpty(self, row, column):
 		if [row, column] in self.cells.keys():
@@ -36,15 +30,12 @@ class GameXO:
 			return True
 	
 	def isPlayerWin(self, player):
-		if player in self.fieldx.keys():
-			if len(self.fieldx[player]) == self.maxline:
-				return True
-		if player in self.fieldy.keys():
-			if len(self.fieldy[player]) == self.maxline:
-				return True
-		if player in self.fieldz.keys():   
-			if len(self.fieldz[player]) == self.maxline:
-				return True 
+		if len(self.fields["fieldx"][player]) == self.maxline:
+			return True
+		if len(self.fields["fieldy"][player]) == self.maxline:
+			return True
+		if len(self.fields["fieldz"][player]) == self.maxline:
+			return True
 
 	def isGameOver(self):
 		if len(self.cells.keys()) == self.rowCount * self.ColumnCount:
