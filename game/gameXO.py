@@ -36,13 +36,16 @@ class GameXO:
 		else:
 			return True
 	
-	def isPlayerWin(self, player, row, col, zline):
+	def isPlayerWin(self, player, row, col, zline1, zline2):
 		if len(self.fieldx[row][player]) == self.maxline:
 			return True
 		if len(self.fieldy[col][player]) == self.maxline:
 			return True
-		if zline != None:
-			if len(self.fieldz[zline][player]) == self.maxline:
+		if zline1 != None:
+			if len(self.fieldz[zline1][player]) == self.maxline:
+					return True
+		if zline2 != None:
+			if len(self.fieldz[zline2][player]) == self.maxline:
 					return True
 
 	def isGameOver(self):
