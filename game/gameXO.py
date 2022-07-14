@@ -18,11 +18,11 @@ class GameXO:
 		for zline in range(0, 2):
 			self.fieldz.update({zline: {1: [], 2: []}})
 
-	def fillField(self, player, row, col, xo=1):
+	def fillField(self, player, row, col, zline, xo=1):
 		self.fieldx[row][player].append(xo)
 		self.fieldy[col][player].append(xo)
-		if row == column:
-			self.fieldz[row/col][player].append(xo)
+		if zline != None:
+			self.fieldz[zline][player].append(xo)
 
 	def addXO(self, row, column, xo, player):
 		self.cells.update({[row,column]: xo})
@@ -34,14 +34,14 @@ class GameXO:
 		else:
 			return True
 	
-	def isPlayerWin(self, player, row, col):
+	def isPlayerWin(self, player, row, col, zline):
 		if len(self.fieldx[row][player]) == self.maxline:
 			return True
 		if len(self.fieldy[col][player]) == self.maxline:
 			return True
-		if row == col:
-			if len(self.fieldz[row/col][player]) == self.maxline:
-				return True
+		if zline != None:
+			if len(self.fieldz[zline][player]) == self.maxline:
+					return True
 
 	def isGameOver(self):
 		if len(self.cells.keys()) == self.rowCount * self.ColumnCount:
