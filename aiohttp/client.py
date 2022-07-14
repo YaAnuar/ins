@@ -3,10 +3,12 @@ import asyncio
 import json
 
 async def write_json_to_file(url):
-    async with aiohttp.ClientSession() as session:
-    	async with session.get(url) as response:
-            with open("London.txt", "w") as london:
-            	london.write(str(await response.json()))	
+	lock = asyncio.Lock()
+	async with lock:
+	    async with aiohttp.ClientSession() as session:
+	    	async with session.get(url) as response:
+	            with open("file.txt", "a") as london:
+	            	london.write(str(await response.json()))	
 
 
 async def main():
