@@ -45,6 +45,6 @@ class GameXO:
 				return "Player №"+str(player)+"won" 
 
 	def isGameOver(self):
-    	if len(self.cells.keys()) == self.rowCount * self.ColumnCount:
-    		return True
+		if len(self.cells.keys()) == self.rowCount * self.ColumnCount:
+			return True
 
