@@ -21,8 +21,9 @@ class GameXO:
 	def fillField(self, player, row, col, zline, xo=1):
 		self.fieldx[row][player].append(xo)
 		self.fieldy[col][player].append(xo)
-		if zline != None:
-			self.fieldz[zline][player].append(xo)
+		
+	def fillZline(self, player, zline, xo=1):
+		self.fieldz[zline][player].append(xo)
 
 	def addXO(self, row, column, zline, xo, player):
 		self.cells.update({[row,column]: xo})
