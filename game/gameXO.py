@@ -18,7 +18,7 @@ class GameXO:
 		self.fieldz[1] = []
 		self.fieldz[2] = []
 
-	def fillField(self, player, xo):
+	def fillField(self, player, xo=1):
 		self.fieldx[player].append(xo)
 		self.fieldy[player].append(xo)
 		if row == column:
