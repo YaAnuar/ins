@@ -32,7 +32,7 @@ class GameXO:
 				self.fieldz[zline2][player].append(xo)
 
 	def addXO(self, row, column, xo, player):
-		if self.gameStart == True:
+		if self.gameStart:
 			self.cells.update({[row,column]: xo})
 
 	def isEmpty(self, row, column):
