@@ -8,10 +8,7 @@ class GameXO:
 		self.rowCount = 3
 		self.columnCount = 3
 		self.maxline = 3
-		self.fields = {}
-		self.fields.update({"fieldx": {1: [], 2: []}})
-		self.fields.update({"fieldy": {1: [], 2: []}})
-		self.fields.update({"fieldz": {1: [], 2: []}})
+		self.fields = {{"fieldx": {1: [], 2: []}}, {"fieldy": {1: [], 2: []}}, {"fieldz": {1: [], 2: []}}}
 
 	def fillField(self, player, xo=1):
 		self.fields["fieldx"][player].append(xo)
