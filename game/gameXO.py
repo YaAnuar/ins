@@ -3,11 +3,11 @@ class GameXO:
 	def __init__():
 		self.startGame()
 
-	def startGame( self ):
+	def startGame( self, rowCount=3,columnCount=3, maxLine=3 ):
 		self.cells = {}
-		self.rowCount = 3
-		self.columnCount = 3
-		self.maxline = 3
+		self.rowCount = rowCount
+		self.columnCount = columnCount
+		self.maxline = maxLine
 		fieldx = {}
 		fieldy = {}
 		fieldz = {}
