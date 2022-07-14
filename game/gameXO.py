@@ -8,6 +8,7 @@ class GameXO:
 		self.rowCount = 3
 		self.columnCount = 3
 		self.maxline = 3
+		self.fields = {}
 		self.fieldx = {}
 		self.fieldx[1] = []
 		self.fieldx[2] = []
@@ -25,7 +26,7 @@ class GameXO:
 			self.fieldz[player].append(xo)
 
 	def addXO(self, row, column, xo, player):
-		self.cells.update([row,column]: xo)
+		self.cells.update({[row,column]: xo})
 		fillField(player)
 
 	def isEmpty(self, row, column):
