@@ -24,7 +24,8 @@ class GameXO:
 		self.fieldy[col][player].append(xo)
 		
 	def fillZline(self, player, zline1, zline2, xo=1):
-		self.fieldz[zline1][player].append(xo)
+		if zline1 != None:
+			self.fieldz[zline1][player].append(xo)
 		if zline2 != None:
 			self.fieldz[zline2][player].append(xo)
 
