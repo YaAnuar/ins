@@ -35,13 +35,13 @@ class GameXO:
 			return True
 	
 	def isPlayerWin(self, player):
-		if player in fieldx.keys():
+		if player in self.fieldx.keys():
 			if len(self.fieldx[player]) == self.maxline:
 				return "Player №"+str(player)+"won"
-		if player in fieldy.keys():
+		if player in self.fieldy.keys():
 			if len(self.fieldy[player]) == self.maxline:
 				return "Player №"+str(player)+"won"
-		if player in fieldz.keys():   
+		if player in self.fieldz.keys():   
 			if len(self.fieldz[player]) == self.maxline:
 				return "Player №"+str(player)+"won" 
 
