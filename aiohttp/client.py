@@ -16,7 +16,7 @@ async def main():
 	await write_json_to_file('w','http://samples.openweathermap.org/data/2.5/forecast?id=2643743&appid=b1b15e88fa797225412429c1c50c122a1')
 	await write_json_to_file('a','http://samples.openweathermap.org/data/2.5/forecast?id=524901&appid=b1b15e88fa797225412429c1c50c122a1')
 	await write_json_to_file('a','http://samples.openweathermap.org/data/2.5/forecast?id=1526384&appid=b1b15e88fa797225412429c1c50c122a11')
-	# # correct way
+	# # correct way. -- my api key doesn't fit
 	#await write_json_to_file('w','https://api.openweathermap.org/data/3.0/onecall?lat=33.44&lon=-94.04&exclude=hourly,daily&appid=d9d3c1fda92985791ef7d4d5b9fe5d88')
 	#await write_json_to_file('a','https://api.openweathermap.org/data/3.0/onecall?lat=55.75&lon=37.61&exclude=hourly,daily&appid=d9d3c1fda92985791ef7d4d5b9fe5d88')
 	#await write_json_to_file('a','https://api.openweathermap.org/data/3.0/onecall?lat=43.23&lon=76.88&exclude=hourly,daily&appid=d9d3c1fda92985791ef7d4d5b9fe5d88')
