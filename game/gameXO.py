@@ -37,13 +37,13 @@ class GameXO:
 	def isPlayerWin(self, player):
 		if player in self.fieldx.keys():
 			if len(self.fieldx[player]) == self.maxline:
-				return "Player №"+str(player)+"won"
+				return True
 		if player in self.fieldy.keys():
 			if len(self.fieldy[player]) == self.maxline:
-				return "Player №"+str(player)+"won"
+				return True
 		if player in self.fieldz.keys():   
 			if len(self.fieldz[player]) == self.maxline:
-				return "Player №"+str(player)+"won" 
+				return True 
 
 	def isGameOver(self):
 		if len(self.cells.keys()) == self.rowCount * self.ColumnCount:
