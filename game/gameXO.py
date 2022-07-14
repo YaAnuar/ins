@@ -21,7 +21,7 @@ class GameXO:
 		self.fieldx[player].append(xo)
 		self.fieldy[player].append(xo)
 		if row == column:
-			self.fieldz[player].append(player)
+			self.fieldz[player].append(xo)
 
 	def addXO(self, row, column, xo, player):
 		self.cells.update([row,column]: xo)
