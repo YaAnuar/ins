@@ -8,9 +8,7 @@ async def write_json_to_file(key, url):
 	    	async with session.get(url) as response:
 	            with open("file.txt", key) as city:
 	            	city.write(str(await response.json()))	
-	            	city.write('\n')
-	            	city.write('\n')
-	            	city.write('\n')
+	            	city.write('\n\n\n')
 
 
 
