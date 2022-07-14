@@ -1,5 +1,5 @@
 class GameXO:
-	## ONLY 3:3 field
+	## ONLY 3x3 field
 	def __init__():
 		self.startGame()
 
