@@ -24,9 +24,8 @@ class GameXO:
 		if zline != None:
 			self.fieldz[zline][player].append(xo)
 
-	def addXO(self, row, column, xo, player):
+	def addXO(self, row, column, zline, xo, player):
 		self.cells.update({[row,column]: xo})
-		fillField(player,row,column, 1)
 
 	def isEmpty(self, row, column):
 		if [row, column] in self.cells.keys():
