@@ -1,9 +1,0 @@
-{'coord': {'lon': -0.1257, 'lat': 51.5085}, 'weather': [{'id': 801, 'main': 'Clouds', 'description': 'few clouds', 'icon': '02d'}], 'base': 'stations', 'main': {'temp': 297.99, 'feels_like': 297.5, 'temp_min': 295.37, 'temp_max': 300.44, 'pressure': 1023, 'humidity': 37}, 'visibility': 10000, 'wind': {'speed': 4.12, 'deg': 310}, 'clouds': {'all': 20}, 'dt': 1657812480, 'sys': {'type': 2, 'id': 268730, 'country': 'GB', 'sunrise': 1657771165, 'sunset': 1657829571}, 'timezone': 3600, 'id': 2643743, 'name': 'London', 'cod': 200}
-
-
-{'coord': {'lon': 37.6156, 'lat': 55.7522}, 'weather': [{'id': 500, 'main': 'Rain', 'description': 'light rain', 'icon': '10d'}], 'base': 'stations', 'main': {'temp': 295.75, 'feels_like': 295.63, 'temp_min': 294.57, 'temp_max': 296.44, 'pressure': 1004, 'humidity': 60, 'sea_level': 1004, 'grnd_level': 987}, 'visibility': 10000, 'wind': {'speed': 3.96, 'deg': 305, 'gust': 5.07}, 'rain': {'1h': 0.23}, 'clouds': {'all': 84}, 'dt': 1657812872, 'sys': {'type': 2, 'id': 47754, 'country': 'RU', 'sunrise': 1657760648, 'sunset': 1657821971}, 'timezone': 10800, 'id': 524901, 'name': 'Moscow', 'cod': 200}
-
-
-{'coord': {'lon': 76.95, 'lat': 43.25}, 'weather': [{'id': 801, 'main': 'Clouds', 'description': 'few clouds', 'icon': '02n'}], 'base': 'stations', 'main': {'temp': 297.1, 'feels_like': 296.41, 'temp_min': 297.1, 'temp_max': 297.1, 'pressure': 1012, 'humidity': 33}, 'visibility': 10000, 'wind': {'speed': 3, 'deg': 140}, 'clouds': {'all': 20}, 'dt': 1657812791, 'sys': {'type': 1, 'id': 8818, 'country': 'KZ', 'sunrise': 1657754668, 'sunset': 1657809069}, 'timezone': 21600, 'id': 1526384, 'name': 'Almaty', 'cod': 200}
-
-
